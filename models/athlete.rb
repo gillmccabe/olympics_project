@@ -25,6 +25,13 @@ class Athlete
     return result
   end
 
+  def events()
+    sql = "SELECT e.* FROM events e INNER JOIN participation p ON e.id = p.event_id WHERE p.athlete_id = #{id} "
+    events =  SqlRunner.run(sql)
+    result = events.map { |event| Event.new(event) }
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM athletes"
     return Athlete.map_items(sql)
