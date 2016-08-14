@@ -1,3 +1,6 @@
+require('pg')
+require_relative('../db/sql_runner')
+
 class Nation
 
   attr_reader :id, :name
@@ -8,9 +11,14 @@ class Nation
   end
 
   def save()
-    sql = "INSERT INTO nations (name) VALUES ('#{@name}'}' ) RETURNING *"
+    sql = "INSERT INTO nations (name) VALUES ('#{@name}') RETURNING *"
     nation = SqlRunner.run(sql).first
     @id = nation['id']
+  end
+
+  def athletes()
+    sql = "SELECT * FROM athletes WHERE nation_id = #{@id}"
+    return Athlete.map_items(sql)
   end
 
   def self.all()

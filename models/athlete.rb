@@ -1,3 +1,7 @@
+require('pg')
+require_relative('../db/sql_runner')
+require_relative('./nation')
+
 class Athlete
 
   attr_reader :id, :name, :nation_id
@@ -5,13 +9,20 @@ class Athlete
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
-    @nation_id = options['nation_id'].to_i
+    @nation_id = options['nation_id']
   end
 
   def save()
     sql = "INSERT INTO athletes (name, nation_id) VALUES ('#{@name}', '#{@nation_id}' ) RETURNING *"
     athlete = SqlRunner.run(sql).first
     @id = athlete['id']
+  end
+
+  def nation()
+    sql = "SELECT * FROM nations WHERE id = #{ @nation_id }"
+    nation_data = SqlRunner.run(sql).first
+    result = Nation.new( nation_data )
+    return result
   end
 
   def self.all()

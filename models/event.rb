@@ -1,3 +1,8 @@
+require('pg')
+require_relative('../db/sql_runner')
+require_relative('./athlete')
+require_relative('./event')
+
 class Event
 
   attr_reader :id, :name, :gold_id, :silver_id, :bronze_id
