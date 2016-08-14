@@ -32,6 +32,27 @@ class Athlete
     return result
   end
 
+  def gold_medals()
+    sql = "SELECT * FROM events WHERE gold_id = #{id}"
+    gold_medals = SqlRunner.run(sql)
+    result = gold_medals.count
+    return result
+  end
+
+  def silver_medals()
+    sql = "SELECT * FROM events WHERE silver_id = #{id}"
+    silver_medals = SqlRunner.run(sql)
+    result = silver_medals.count
+    return result
+  end
+
+  def bronze_medals()
+    sql = "SELECT * FROM events WHERE bronze_id = #{id}"
+    bronze_medals = SqlRunner.run(sql)
+    result = bronze_medals.count
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM athletes"
     return Athlete.map_items(sql)
