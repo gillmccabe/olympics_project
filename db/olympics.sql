@@ -9,16 +9,16 @@ CREATE TABLE nations(
   name VARCHAR(255)
 );
 
-CREATE TABLE atheletes(
+CREATE TABLE athletes(
   id serial4 PRIMARY KEY,
-  name VARCHAR(255)
+  name VARCHAR(255),
   nation_id INT4 references nations(id) ON DELETE CASCADE
 );
 
 CREATE TABLE events(
   id serial4 PRIMARY KEY,
   name VARCHAR(255),
-  gold_id references athletes(id) ON DELETE CASCADE,
+  gold_id INT4 references athletes(id) ON DELETE CASCADE,
   silver_id INT4 references athletes(id) ON DELETE CASCADE,
   bronze_id INT4 references athletes(id) ON DELETE CASCADE
 );
