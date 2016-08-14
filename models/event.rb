@@ -2,6 +2,7 @@ require('pg')
 require_relative('../db/sql_runner')
 require_relative('./athlete')
 require_relative('./event')
+require_relative('./participation')
 
 class Event
 
@@ -19,6 +20,11 @@ class Event
     sql = "INSERT INTO events (name, gold_id, silver_id, bronze_id) VALUES ('#{@name}', '#{@gold_id}', '#{@silver_id}', '#{@bronze_id}' ) RETURNING *"
     event = SqlRunner.run(sql).first
     @id = event['id']
+  end
+
+  def athletes()
+    sql = "SELECT a.* FROM athletes a INNER JOIN participation p ON a.id = p.athlete_id WHERE p.event_id = #{@id} "
+    return Athlete.map_items( sql )
   end
 
   def self.all()

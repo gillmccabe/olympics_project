@@ -2,6 +2,7 @@ require('pry-byebug')
 require_relative('../models/athlete.rb')
 require_relative('../models/nation.rb')
 require_relative('../models/event.rb')
+require_relative('../models/participation.rb')
 
 Nation.delete_all()
 Athlete.delete_all()
@@ -39,6 +40,18 @@ athlete7.save
 athlete8.save
 
 
+event1 = Event.new({ 'name' => 'Tennis', 'gold_id' => athlete1.id, 'silver_id' => athlete2.id, 'bronze_id' => athlete3.id})
+
+event1.save
+
+
+participation1 = Participation.new({'athlete_id' => athlete1.id, 'event_id' => event1.id})
+participation2 = Participation.new({'athlete_id' => athlete2.id, 'event_id' => event1.id})
+participation3 = Participation.new({'athlete_id' => athlete3.id, 'event_id' => event1.id})
+
+participation1.save
+participation2.save
+participation3.save
 
 
 
