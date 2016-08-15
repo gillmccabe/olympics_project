@@ -9,7 +9,10 @@ class League
     @events = events
   end
 
-#write method to check athlete total points
+  def nations_gold_medals()
+  end
+
+
 
 #write three seperate methods to check gold/silver/bronze medals for each nation
 

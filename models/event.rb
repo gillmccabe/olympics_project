@@ -6,7 +6,7 @@ require_relative('./participation')
 
 class Event
 
-  attr_reader :id, :name, :gold_id, :silver_id, :bronze_id
+  attr_accessor :id, :name, :gold_id, :silver_id, :bronze_id
 
   def initialize(options)
     @id = options['id'].to_i

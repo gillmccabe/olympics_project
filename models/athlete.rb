@@ -4,7 +4,7 @@ require_relative('./nation')
 
 class Athlete
 
-  attr_reader :id, :name, :nation_id
+  attr_accessor :id, :name, :nation_id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -51,6 +51,10 @@ class Athlete
     bronze_medals = SqlRunner.run(sql)
     result = bronze_medals.count
     return result
+  end
+
+  def total_points()
+    return (gold_medals * 5) + (silver_medals * 3) + (bronze_medals * 1)
   end
 
   def self.all()
