@@ -1,4 +1,5 @@
 require_relative('../models/athlete.rb')
+require("pry-byebug")
 
 get '/athletes' do
   @athletes = Athlete.all
@@ -10,21 +11,28 @@ get '/athletes/new' do
 end
 
 get '/athletes/:id' do
-  @athlete = Athlete.find(params["id"])
+  @athlete = Athlete.find(params[:id])
   erb(:'athlete/show')
-end
-
-get '/athletes/:id/edit' do
 end
 
 post '/athletes' do
   @athlete = Athlete.new(params)
-  @athlete.save
-  redirect to( "athletes" )
+  @athlete.save()
+  redirect to( '/athletes' )
+end
+
+get '/athletes/:id/edit' do
+@athlete = Athlete.find( params[:id] )
+erb(:'athlete/edit' )
 end
 
 post '/athletes/:id' do
+  Athlete.update( params )
+  redirect to( "/athletes/#{params[:id]}" )
 end
 
-delete '/athletes' do
+
+post '/athletes/:id/delete' do
+  Athlete.destroy( params[:id] )
+  redirect (to('/athletes'))
 end
