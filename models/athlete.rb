@@ -67,6 +67,14 @@ class Athlete
     return Athlete.map_item(sql)
   end
 
+  def self.update( options )
+    sql = "UPDATE athletes SET
+          name='#{options['name']}',
+          nation_id='#{options['nation_id']}',
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
   def self.delete_all()
     sql = "DELETE FROM athletes"
     SqlRunner.run(sql)

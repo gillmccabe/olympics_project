@@ -9,8 +9,7 @@ class League
     @events = events
   end
 
-  def nations_gold_medals()
-  end
+
 
 
 

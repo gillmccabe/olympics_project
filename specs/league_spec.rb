@@ -39,8 +39,6 @@ class TestLeague < Minitest::Test
 
   end
 
-  def test_nations_gold_medals()
+  def test_nations_gold_medals(1)
     assert_equal(1, @league.nations_gold_medals)
   end
-
-end 
