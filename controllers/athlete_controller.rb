@@ -29,6 +29,7 @@ end
 get '/athletes/:id/edit' do
 @athlete = Athlete.find( params[:id] )
 @nations = Nation.all()
+@events = Event.all()
 erb(:'athlete/edit' )
 end
 

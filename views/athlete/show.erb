@@ -11,7 +11,11 @@
 <br>
 
 <b>Participating in: </b>
-<p><%= @athlete.events.map { |event| event.name } %></p>
+<% @athlete.events.each do |event| %>
+  <p><%=event.name %></p>   
+<%  end %>
+<br>
+<br>
 
 <b>Total Gold Medals:</b>
 <p><%= @athlete.gold_medals %></p>

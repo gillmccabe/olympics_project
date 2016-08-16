@@ -1,0 +1,33 @@
+<br></br>
+<h2>Event Details</h2>
+<br>
+
+<b>Name of Event: </b>
+<p><%= @event.name %></p>
+<br>
+
+<b>Athletes Participating in Event: </b>
+<% @event.athletes.each do |athlete| %>
+<p><%= athlete.name %></p>
+<br>
+
+
+<b>Gold Medal Winner:</b>
+<p><%= @event.gold_id %></p>
+<br>
+
+<b>Silver Medal Winner:</b>
+<p><%= @event.silver_id %></p>
+<br>
+
+<b>Bronze Medal Winner:</b>
+<p><%= @event.bronze_id %></p>
+<br>
+<!-- 
+
+<a href="/events/<%= @event.id %>/edit">Edit</a>
+<br>
+<br>
+<form action="/events/<%= @event.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form> -->

@@ -6,65 +6,32 @@
   <input type="text" name="name"><br>
   <br>
 
-  <label for="name">Number of Athletes:</label>
-  <input type="number" name="number_of_athletes"><br>
+  <label for="gold_id">Gold Medal Winner:</label>
+  <select name="gold_id">
+  <% @athletes.each do |athlete| %>
+    <option value="<%= athlete.id %>"><%=athlete.name %></option>   
+  <% end %>
+  </select>
   <br>
 
-  <label for="athlete_id">Athlete 1:</label>
-      <select name="athlete_id">
-        <option value="">---</option>
-          <% @athletes.each do |athlete| %>
-            <option value="<%= athlete.id %>"><%=athlete.name %></option>   
-          <%  end %>
-      </select>
-      <br>
+  <label for="silver_id">Silver Medal Winner:</label>
+  <select name="silver_id">
+  <% @athletes.each do |athlete| %>
+    <option value="<%= athlete.id %>"><%=athlete.name %></option>   
+  <% end %>
+  </select>
+  <br>
 
-  <label for="athlete_id">Athlete 2:</label>
-      <select name="athlete_id">
-          <% @athletes.each do |athlete| %>
-            <option value="<%= athlete.id %>"><%=athlete.name %></option>   
-           <%  end %>
-      </select>
-      <br>
-
-  <label for="athlete_id">Athlete 3:</label>
-       <select name="athlete_id">
-          <% @athletes.each do |athlete| %>
-            <option value="<%= athlete.id %>"><%=athlete.name %></option>   
-           <%  end %>
-      </select>
-      <br>
-
-  <label for="athlete_id">Athlete 4:</label>
-       <select name="athlete_id">
-          <% @athletes.each do |athlete| %>
-            <option value="<%= athlete.id %>"><%=athlete.name %></option>   
-           <%  end %>
-      </select>
-      <br>
-
-  <label for="athlete_id">Athlete 5:</label>
-       <select name="athlete_id">
-           <% @athletes.each do |athlete| %>
-             <option value="<%= athlete.id %>"><%=athlete.name %></option>   
-             <%  end %>
-      </select>
-      <br>
-      <br>
-
-  <label for="gold_id">Gold Medal Winner:</label>
-       <select name="gold_id">
-          
-          <% @athletes.each do |athlete| %>
-          <option value="<%= athlete.id %>"><%=athlete.name %></option>   
-          <% end %>
-          <br>
-          <br>
-
+  <label for="bronze_id">Bronze Medal Winner:</label>
+  <select name="bronze_id">
+  <% @athletes.each do |athlete| %>
+    <option value="<%= athlete.id %>"><%=athlete.name %></option>   
+  <% end %>
+  </select>       
+  <br>
 
   <input type='submit' value="Add Event!">
 </form>
-
 <br>
 <br>
 <a href="/">Back</a>

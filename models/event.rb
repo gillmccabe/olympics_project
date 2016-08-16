@@ -43,6 +43,13 @@ class Event
   end
 
 
+  def self.destroy( id )
+    sql = "DELETE FROM events WHERE id=#{id}" 
+    SqlRunner.run(sql)
+  end
+
+
+
   def self.map_items(sql)
     events = SqlRunner.run(sql)
     result = events.map { |event| Event.new( event ) }
