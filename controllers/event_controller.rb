@@ -1,5 +1,7 @@
 require_relative('../models/nation.rb')
 require_relative('../models/event.rb')
+require_relative('../models/participation.rb')
+require_relative('../models/athlete.rb')
 require("pry-byebug")
 
 get '/events' do
@@ -8,32 +10,34 @@ get '/events' do
 end
 
 get '/events/new' do
+  @participation = Participation.all
+  @athletes = Athlete.all
   erb(:'event/new')
 end
 
-get '/nations/:id' do
-  @nation = Nation.find(params[:id])
-  erb(:'nation/show')
+get '/events/:id' do
+  @event = Event.find(params[:id])
+  erb(:'event/show')
 end
 
-post '/nations' do
-  @nation = Nation.new(params)
-  @nation.save()
-  redirect to( '/nations' )
+post '/events' do
+  @event = Event.new(params)
+  @event.save()
+  redirect to( '/events' )
 end
 
-get '/nations/:id/edit' do
-@nation = Nation.find( params[:id] )
-erb(:'nation/edit' )
+get '/events/:id/edit' do
+@event = Event.find( params[:id] )
+erb(:'event/edit' )
 end
 
-post '/nations/:id' do
-  Nation.update( params )
-  redirect to( "/nations/#{params[:id]}" )
+post '/events/:id' do
+  Event.update( params )
+  redirect to( "/events/#{params[:id]}" )
 end
 
 
-post '/nations/:id/delete' do
-  Nation.destroy( params[:id] )
-  redirect (to('/nations'))
+post '/events/:id/delete' do
+  Event.destroy( params[:id] )
+  redirect (to('/events'))
 end
