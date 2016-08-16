@@ -12,6 +12,13 @@
           <%  end %>
       </select>
 
+  <label for="event_id">Event:</label>
+      <select name="event_id">
+          <% @events.each do |event| %>
+            <option value="<%= event.id %>"><%= event.name %></option>   
+          <%  end %>
+      </select>
+
 
   <input type='submit' value="Add Athlete!">
 </form>

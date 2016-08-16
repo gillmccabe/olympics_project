@@ -11,8 +11,7 @@
 <br>
 
 <b>Participating in: </b>
-<p><%= @athlete.events %>
-</p>
+<p><%= @athlete.events.map { |event| event.name } %></p>
 
 <b>Total Gold Medals:</b>
 <p><%= @athlete.gold_medals %></p>

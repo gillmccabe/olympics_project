@@ -1,6 +1,6 @@
 require_relative('../models/athlete.rb')
 require_relative('../models/nation.rb')
-require_relative('../models/events.rb')
+require_relative('../models/event.rb')
 require("pry-byebug")
 
 get '/athletes' do
@@ -10,6 +10,7 @@ end
 
 get '/athletes/new' do
   @nations = Nation.all
+  @events = Event.all
   erb(:'athlete/new')
 end
 
