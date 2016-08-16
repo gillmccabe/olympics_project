@@ -1,7 +1,36 @@
-<p><b>Nation Name: </b><%= @nation.name %></p>
+<br></br>
+<h2>Nation Details</h2>
+<br>
+
+<b>Name: </b>
+<p><%= @nation.name %></p>
+<br>
+
+<b>Athletes: </b>
+<p><% @nation.athletes.each do |athlete| %>
+  <%= athlete.name  %> <br></br>
+<% end %></p>
+<br>
+
+<b>Total Gold Medals:</b>
+<p><%= @nation.gold_medals %></p>
+<br>
+
+<b>Total Silver Medals:</b>
+<p><%= @nation.silver_medals %></p>
+<br>
+
+<b>Total Bronze Medals:</b>
+<p><%= @nation.bronze_medals %></p>
+<br>
+
+<b>Total Points:</b>
+<p><%= @nation.total_points %></p>
+<br>
 
 <a href="/nations/<%= @nation.id %>/edit">Edit</a>
-
+<br>
+<br>
 <form action="/nations/<%= @nation.id %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>

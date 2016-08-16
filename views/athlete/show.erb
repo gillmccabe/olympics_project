@@ -1,3 +1,14 @@
-<%= @athlete.name %>
-
+<br></br>
+<h2>Nation Details</h2>
+<br>
+<b>Athlete Name: </b>
+<p><%= @athlete.name %></p>
+<b>Athlete Nation: </b>
+<p><%= @athlete.nation.name %></p>
+<br>
 <a href="/athletes/<%= @athlete.id %>/edit">Edit</a>
+<br>
+<br>
+<form action="/athletes/<%= @athlete.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>

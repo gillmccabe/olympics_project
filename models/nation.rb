@@ -40,6 +40,12 @@ class Nation
     end
   end
 
+  def total_points()
+    athletes.map do |athlete|
+      return athlete.total_points
+    end
+  end
+
   def self.all()
     sql = "SELECT * FROM nations"
     return Nation.map_items(sql)
@@ -79,3 +85,4 @@ class Nation
   end
 
 end
+
