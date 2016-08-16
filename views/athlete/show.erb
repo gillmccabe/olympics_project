@@ -1,11 +1,31 @@
 <br></br>
 <h2>Nation Details</h2>
 <br>
+
 <b>Athlete Name: </b>
 <p><%= @athlete.name %></p>
+<br>
+
 <b>Athlete Nation: </b>
 <p><%= @athlete.nation.name %></p>
 <br>
+
+<b>Total Gold Medals:</b>
+<p><%= @athlete.gold_medals %></p>
+<br>
+
+<b>Total Silver Medals:</b>
+<p><%= @athlete.silver_medals %></p>
+<br>
+
+<b>Total Bronze Medals:</b>
+<p><%= @athlete.bronze_medals %></p>
+<br>
+
+<b>Total Points:</b>
+<p><%= @athlete.total_points %></p>
+<br>
+
 <a href="/athletes/<%= @athlete.id %>/edit">Edit</a>
 <br>
 <br>
