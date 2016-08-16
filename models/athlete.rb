@@ -33,12 +33,6 @@ class Athlete
     return result
   end
 
-  def partipating_athletes_names()
-    sql = "SELECT a.* FROM athletes a INNER JOIN participation p ON a.id = p.athlete_id WHERE p.athlete_id = #{id}"
-    athletes = SqlRunner.run(sql)
-    result = athletes.name
-  end
-
   def gold_medals()
     sql = "SELECT * FROM events WHERE gold_id = #{id}"
     gold_medals = SqlRunner.run(sql)
