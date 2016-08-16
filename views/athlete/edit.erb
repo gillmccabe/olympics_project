@@ -1,0 +1,19 @@
+<br></br>
+<h2>Edit Athlete</h2>
+<br></br>
+
+<form action="/athletes/<%= @athlete.id %>" method="post">
+  
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%= @athlete.name() %>" >
+
+  <label for="nation_id">Nation:</label>
+      <select name="nation_id">
+          <% @nations.each do |nation| %>
+            <option value="<%= nation.id %>"><%= nation.name %>
+            </option>  
+          <%  end %>
+    </select>
+
+  <input type='submit' value="Update">
+</form>

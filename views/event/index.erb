@@ -1,0 +1,8 @@
+<br>
+<h2>Events</h2>
+<br>
+<% @events.each do |event| %>
+  <a href="/events/<%= event.id  %>"><%= event.name %></a><br></br>
+<% end %>
+<br>
+<a href="/events/new">Add new event</a><br>

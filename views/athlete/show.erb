@@ -1,14 +1,18 @@
 <br></br>
-<h2>Nation Details</h2>
+<h2>Athlete Details</h2>
 <br>
 
-<b>Athlete Name: </b>
+<b>Name: </b>
 <p><%= @athlete.name %></p>
 <br>
 
-<b>Athlete Nation: </b>
+<b>Nation: </b>
 <p><%= @athlete.nation.name %></p>
 <br>
+
+<b>Participating in: </b>
+<p><%= @athlete.events %>
+</p>
 
 <b>Total Gold Medals:</b>
 <p><%= @athlete.gold_medals %></p>

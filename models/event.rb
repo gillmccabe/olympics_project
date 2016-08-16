@@ -19,7 +19,7 @@ class Event
   def save()
     sql = "INSERT INTO events (name, gold_id, silver_id, bronze_id) VALUES ('#{@name}', '#{@gold_id}', '#{@silver_id}', '#{@bronze_id}' ) RETURNING *"
     event = SqlRunner.run(sql).first
-    @id = event['id']
+    @id = event['id'].to_i
   end
 
   def athletes()
@@ -45,7 +45,7 @@ class Event
 
   def self.map_items(sql)
     events = SqlRunner.run(sql)
-    result = events.map { || Event.new( events ) }
+    result = events.map { |event| Event.new( event ) }
     return result
   end
 

@@ -9,13 +9,13 @@ class Athlete
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
-    @nation_id = options['nation_id']
+    @nation_id = options['nation_id'].to_i
   end
 
   def save()
     sql = "INSERT INTO athletes (name, nation_id) VALUES ('#{@name}', '#{@nation_id}' ) RETURNING *"
     athlete = SqlRunner.run(sql).first
-    @id = athlete['id']
+    @id = athlete['id'].to_i
   end
 
   def nation()
@@ -70,13 +70,18 @@ class Athlete
   def self.update( options )
     sql = "UPDATE athletes SET
           name='#{options['name']}',
-          nation_id='#{options['nation_id']}',
+          nation_id='#{options['nation_id']}'
           WHERE id='#{options['id']}'"
     SqlRunner.run( sql )
   end
 
   def self.delete_all()
     sql = "DELETE FROM athletes"
+    SqlRunner.run(sql)
+  end
+
+  def self.destroy( id )
+    sql = "DELETE FROM athletes WHERE id=#{id}" 
     SqlRunner.run(sql)
   end
 
