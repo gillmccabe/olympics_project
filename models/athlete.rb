@@ -74,6 +74,12 @@ class Athlete
     return result.name
   end
 
+  def self.find_name(id)
+    sql = "SELECT * FROM athletes WHERE id = #{id}"
+    result = Athlete.map_item(sql)
+    return result.name
+  end
+
   def self.update( options )
     sql = "UPDATE athletes SET
           name='#{options['name']}',

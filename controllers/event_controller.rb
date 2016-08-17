@@ -15,12 +15,15 @@ end
 
 get '/events/:id' do
   @event = Event.find(params[:id])
+  @participation = Participation.all
+  @athlete = Athlete.all
   erb(:'event/show')
 end
 
 post '/events' do
   @event = Event.new(params)
   @event.save()
+  @participation = Participation.update(params)
   redirect to( '/events' )
 end
 

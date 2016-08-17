@@ -18,6 +18,16 @@ class Participation
     @id = participation['id']
   end
 
+  def self.update(options)
+    sql = "UPDATE participation SET
+          athlete_id='#{options['athlete_id']}',
+          event_id='#{options['event_id']}'
+          WHERE id='#{options['id']}'"
+    SqlRunner.run( sql )
+  end
+
+   
+
   def self.all()
     sql = "SELECT * FROM participation"
     return Participation.map_items(sql)

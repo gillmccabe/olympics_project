@@ -6,10 +6,10 @@
 <p><%= @event.name %></p>
 <br>
 
-<b>Participants in Event: </b>
-<% @event.athletes.each do |athlete| %>
-  <p><%=athlete.name %></p>   
-<%  end %>
+<b>Participants in Event: </b><br>
+<% @participation.each do |athlete| %>
+  <%= Athlete.find_name(athlete.athlete_id) %><br>
+<% end %>
 <br>
 <br>
 
@@ -27,6 +27,14 @@
 <p><%= Athlete.find_medal(@event.bronze_id) %></p>
 <br>
 <br>
+
+
+<a href="/events/<%= @event.id %>/edit">Edit</a>
+<br>
+<br>
+<form action="/events/<%= @event.id %>/delete" method="post">
+  <input type="submit" value="Delete">
+</form>
 
 
 
