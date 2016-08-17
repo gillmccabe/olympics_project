@@ -1,20 +1,49 @@
 <br></br>
-<h2>Edit Event</h2>
+<h3 class="fixed">Edit Event</h2>
 <br></br>
 
+<section class="add_athlete">
 <form action="/events/<%= @event.id %>" method="post">
   
-  <label for="name">Name:</label>
+  <label for="name"><b>Name: </b></label>
   <input type="text" name="name" value="<%= @event.name() %>" >
 
-  <label for="athlete_id">Participating Athletes:</label>
-      <select name="athlete_id">
-          <% @athletes.each do |athlete| %>
-            <option value="<%= athlete.id %>"><%= athlete.name %>
-            </option>  
-          <%  end %>
-    </select>
+  <p class="participant"> Participants: </p>
+    <p class="checklist">
+    <% @athletes.each do |athlete| %>
+      <label for="<%= athlete.name %>"><%= athlete.name %></label>
+      <input name="<%= athlete.name %>" type="checkbox" value="<%= athlete.id %>">
+      <% end %>
+      </select>
+      </p>
+      <br>
+
+      <label for="gold_id"><b>Gold Medal Winner: </b></label>
+      <select name="gold_id">
+      <% @athletes.each do |athlete| %>
+        <option value="<%= athlete.id %>"><%=athlete.name %></option>   
+      <% end %>
+      </select>
+      
+
+      <label for="silver_id"><b>Silver Medal Winner: </b></label>
+      <select name="silver_id">
+      <% @athletes.each do |athlete| %>
+        <option value="<%= athlete.id %>"><%=athlete.name %></option>   
+      <% end %>
+      </select>
+
+
+      <label for="bronze_id"><b>Bronze Medal Winner: </b></label>
+      <select name="bronze_id">
+      <% @athletes.each do |athlete| %>
+        <option value="<%= athlete.id %>"><%=athlete.name %></option> 
+        <% end %>  
+        </select>
+        <br>
+        <br>
 
 
   <input type='submit' value="Update">
 </form>
+</section>
