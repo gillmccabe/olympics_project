@@ -1,8 +1,8 @@
 <br>
 <h2>Athletes</h2>
 <br>
-<% @athletes.each do |athlete| %>
+<div><% @athletes.each do |athlete| %>
   <a href="/athletes/<%= athlete.id  %>"><%= athlete.name %></a><br></br>
-<% end %>
+<% end %></div>
 <br>
 <a href="/athletes/new">Add new athlete</a><br>

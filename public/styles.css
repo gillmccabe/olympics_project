@@ -1,0 +1,50 @@
+html, body {
+  margin:0px; padding:0px;
+}
+
+body {
+        background-image: url("http://wallpaperwide.info/web/wallpapers/rio-2016-wallpaper-1920x1080/1600x900.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 103%;
+
+}
+
+ul {  
+    position: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E53A40;
+}
+
+li {
+    float: left;
+    font-size: 30px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #c03546;
+}
+
+h2 { 
+    padding-top: 140px;
+    padding-left: 20px;
+    color: white; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 125px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1;
+}
+
+
