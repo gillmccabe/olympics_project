@@ -7,11 +7,15 @@ body {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: 100% 103%;
-
 }
 
+
+
 ul {  
-    position: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -37,6 +41,8 @@ li a:hover {
 }
 
 h2 { 
+    z-index: 1;
+    position: fixed;
     padding-top: 140px;
     padding-left: 20px;
     color: white; 
@@ -47,4 +53,60 @@ h2 {
     line-height: 1;
 }
 
+h3 { 
+    z-index: 1;
+    position: fixed;
+    padding-top: 180px;
+    padding-left: 20px;
+    color: white; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 75px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1;
+}
 
+.spacer {
+    width: 100%;
+    height: 400px ;
+    overflow: auto;
+
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+  top: 700px;
+  display: block;
+  position: relative;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 400px;
+  color: black; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 40px; 
+  font-weight: bold; 
+  z-index:200;
+}
+
+a {
+  color: black
+}
+
+a:hover {
+    color: red;
+}
+
+.add_nation {
+  display: block;
+  position: relative;
+  background-color: white;
+  width: 400px;
+  color: blue; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 20px; 
+  font-weight: bold; 
+  z-index:200;
+}

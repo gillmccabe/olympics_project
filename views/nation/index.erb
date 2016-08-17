@@ -1,12 +1,16 @@
 
 <h2>Nations</h2>
 <br></br>
+<div class="spacer"></div>
+<section>
 <% @nations.each do |nation| %>
   <a href="/nations/<%= nation.id  %>"><%= nation.name %></a><br></br>
 <% end %>
 <br>
+<div class="add_nation">
 <a href="/nations/new">Add new nation</a><br>
-<br>
-<br>
-<a href="/">Back</a>
+<a href="/">Back to homepage</a>
+</div>
+</section>
+
 

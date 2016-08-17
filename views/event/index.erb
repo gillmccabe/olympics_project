@@ -1,8 +1,13 @@
 <br>
 <h2>Events</h2>
 <br>
+<section>
 <% @events.each do |event| %>
   <a href="/events/<%= event.id  %>"><%= event.name %></a><br></br>
 <% end %>
 <br>
+<div class="add_nation">
 <a href="/events/new">Add new event</a><br>
+<a href="/">Back to homepage</a>
+</div>
+</section>

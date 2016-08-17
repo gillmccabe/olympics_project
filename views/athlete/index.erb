@@ -1,8 +1,13 @@
 <br>
 <h2>Athletes</h2>
 <br>
-<div><% @athletes.each do |athlete| %>
+<section>
+<% @athletes.each do |athlete| %>
   <a href="/athletes/<%= athlete.id  %>"><%= athlete.name %></a><br></br>
-<% end %></div>
+<% end %>
 <br>
+<div class="add_nation">
 <a href="/athletes/new">Add new athlete</a><br>
+<a href="/">Back to homepage</a>
+</div>
+</section>
