@@ -13,15 +13,18 @@
 <br>
 
 <b>Total Gold Medals:</b>
-  <%= @league.silver_medals_by_nation( @nation.id ) %>
+  <p><%= @league.gold_medals_by_nation( @nation.id ) %></p>
+<br>
 <br>
 
 <b>Total Silver Medals:</b>
-  <%= @league.silver_medals_by_nation( @nation.id ) %>
+  <p><%= @league.silver_medals_by_nation( @nation.id ) %></p>
+<br>
 <br>
 
 <b>Total Bronze Medals:</b>
-<p><%= @nation.bronze_medals %></p>
+  <p><%= @league.bronze_medals_by_nation( @nation.id ) %></p>
+<br>
 <br>
 
 <b>Total Points:</b>
