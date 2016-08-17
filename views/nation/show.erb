@@ -6,8 +6,9 @@
 <p><b>Name: </b><%= @nation.name %></p>
 <br>
 
-<p><b>Athletes: </b><% @nation.athletes.each do |athlete| %>
-  <%= athlete.name  %>
+<b>Athletes: </b>
+<p><% @nation.athletes.each do |athlete| %>
+  <%= athlete.name  %><br>
 <% end %></p>
 <br>
 

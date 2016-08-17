@@ -3,22 +3,20 @@
 <br>
 
 <section class="show_details">
-<p><b>Name: </b><%= @athlete.name %></p>
-<br>
+<p><b>Name: </b><%= @athlete.name %></p><br>
 
 <p><b>Nation: </b><%= @athlete.nation.name %></p>
 <br>
 
-<p><b>Participating in: </b><% @athlete.events.each do |event| %><%=event.name %></p>   
+<p><b>Participating in: </b>
+<% @athlete.events.each do |event| %><%=event.name %></p> 
 <%  end %>
 <br>
-<br>
+
 
 <p><b>Total Gold Medals: </b><%= @athlete.gold_medals %></p>
-<br>
 
 <p><b>Total Silver Medals: </b><%= @athlete.silver_medals %></p>
-<br>
 
 <p><b>Total Bronze Medals: </b><%= @athlete.bronze_medals %></p>
 <br>
