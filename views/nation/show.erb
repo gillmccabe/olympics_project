@@ -28,7 +28,7 @@
 <br>
 
 <b>Total Points:</b>
-<p><%= @nation.total_points %></p>
+<p><%= @league.points_by_nation( @nation.id ) %></p>
 <br>
 
 <a href="/nations/<%= @nation.id %>/edit">Edit</a>

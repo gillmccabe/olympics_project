@@ -32,6 +32,12 @@ class League
     end
   end
 
+  def points_by_nation( nation_id )
+    return athletes_by_nation( nation_id ).map { |athlete| athlete.total_points }.reduce(0) do | sum, n |
+      sum + n
+    end
+  end
+
 
 
 end
