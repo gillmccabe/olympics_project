@@ -1,41 +1,35 @@
 <br></br>
-<h3>Athlete Details</h3>
+<h3 class="h3_fixed">Athlete Details</h3>
 <br>
 
-<b>Name: </b>
-<p><%= @athlete.name %></p>
+<section class="show_details">
+<p><b>Name: </b><%= @athlete.name %></p>
 <br>
 
-<b>Nation: </b>
-<p><%= @athlete.nation.name %></p>
+<p><b>Nation: </b><%= @athlete.nation.name %></p>
 <br>
 
-<b>Participating in: </b>
-<% @athlete.events.each do |event| %>
-  <p><%=event.name %></p>   
+<p><b>Participating in: </b><% @athlete.events.each do |event| %><%=event.name %></p>   
 <%  end %>
 <br>
 <br>
 
-<b>Total Gold Medals:</b>
-<p><%= @athlete.gold_medals %></p>
+<p><b>Total Gold Medals: </b><%= @athlete.gold_medals %></p>
 <br>
 
-<b>Total Silver Medals:</b>
-<p><%= @athlete.silver_medals %></p>
+<p><b>Total Silver Medals: </b><%= @athlete.silver_medals %></p>
 <br>
 
-<b>Total Bronze Medals:</b>
-<p><%= @athlete.bronze_medals %></p>
+<p><b>Total Bronze Medals: </b><%= @athlete.bronze_medals %></p>
 <br>
 
-<b>Total Points:</b>
-<p><%= @athlete.total_points %></p>
+<p><b>Total Points: </b><%= @athlete.total_points %></p>
 <br>
 
-<a href="/athletes/<%= @athlete.id %>/edit">Edit</a>
+<a href="/athletes/<%= @athlete.id %>/edit"><b>Edit</b></a>
 <br>
 <br>
 <form action="/athletes/<%= @athlete.id %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>
+</section>

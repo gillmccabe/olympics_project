@@ -1,17 +1,19 @@
 <h3>Add Event</h3>
-
+<section class="add_event">
 <form action="/events" method="post">
 
   <label for="name">Name of Event:</label>
   <input type="text" name="name"><br>
   <br>
 
+<p class="participant"> Participants: </p>
+  <p class="checklist">
   <% @athletes.each do |athlete| %>
     <label for="<%= athlete.name %>"><%= athlete.name %></label>
     <input name="<%= athlete.name %>" type="checkbox" value="<%= athlete.id %>">
     <% end %>
     </select>
-    <br>
+    </p>
     <br>
 
   <label for="gold_id">Gold Medal Winner:</label>
@@ -20,7 +22,7 @@
     <option value="<%= athlete.id %>"><%=athlete.name %></option>   
   <% end %>
   </select>
-  <br>
+  
 
   <label for="silver_id">Silver Medal Winner:</label>
   <select name="silver_id">
@@ -28,7 +30,7 @@
     <option value="<%= athlete.id %>"><%=athlete.name %></option>   
   <% end %>
   </select>
-  <br>
+
 
   <label for="bronze_id">Bronze Medal Winner:</label>
   <select name="bronze_id">
@@ -36,10 +38,12 @@
     <option value="<%= athlete.id %>"><%=athlete.name %></option>   
   <% end %>
   </select>       
-  <br>
-
+<br>
+<br>
   <input type='submit' value="Add Event!">
 </form>
 <br>
-<br>
+<div class="add_nation2">
 <a href="/">Back</a>
+</div>
+</section>

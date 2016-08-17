@@ -1,39 +1,32 @@
 <br></br>
-<h3>Nation Details</h3>
+<h3 class="h3_fixed">Nation Details</h3>
 <br>
 
-<b>Name: </b>
-<p><%= @nation.name %></p>
+<section class="show_details">
+<p><b>Name: </b><%= @nation.name %></p>
 <br>
 
-<b>Athletes: </b>
-<p><% @nation.athletes.each do |athlete| %>
-  <%= athlete.name  %> <br></br>
+<p><b>Athletes: </b><% @nation.athletes.each do |athlete| %>
+  <%= athlete.name  %>
 <% end %></p>
 <br>
 
-<b>Total Gold Medals:</b>
-  <p><%= @league.gold_medals_by_nation( @nation.id ) %></p>
-<br>
+<p><b>Total Gold Medals: </b><%= @league.gold_medals_by_nation( @nation.id ) %></p>
 <br>
 
-<b>Total Silver Medals:</b>
-  <p><%= @league.silver_medals_by_nation( @nation.id ) %></p>
-<br>
+<p><b>Total Silver Medals: </b><%= @league.silver_medals_by_nation( @nation.id ) %></p>
 <br>
 
-<b>Total Bronze Medals:</b>
-  <p><%= @league.bronze_medals_by_nation( @nation.id ) %></p>
-<br>
+<p><b>Total Bronze Medals: </b><%= @league.bronze_medals_by_nation( @nation.id ) %></p>
 <br>
 
-<b>Total Points:</b>
-<p><%= @league.points_by_nation( @nation.id ) %></p>
+<p><b>Total Points: </b><%= @league.points_by_nation( @nation.id ) %></p>
 <br>
 
-<a href="/nations/<%= @nation.id %>/edit">Edit</a>
+<a href="/nations/<%= @nation.id %>/edit"><b>Edit</b></a>
 <br>
 <br>
 <form action="/nations/<%= @nation.id %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>
+</section>

@@ -65,6 +65,19 @@ h3 {
     line-height: 1;
 }
 
+.h3_fixed { 
+    z-index: 1;
+    position: fixed;
+    padding-top: 190px;
+    padding-left: 20px;
+    color: white; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 75px; 
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1;
+}
+
 
 section {
   margin: 20px;
@@ -87,18 +100,70 @@ section {
 .new {
   margin: 20px;
   padding: 20px;
-  top: -70px;
+  top: -50px;
   display: inline-block;
   background-color: white;
   border-color: black;
   border-style: solid;
   border-width: 1px;
-  width: 400px;
+  width: 920px;
   color: black; 
   font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 40px; 
+  font-size: 20px; 
   font-weight: bold; 
+}
 
+.add_athlete {
+  margin: 20px;
+  padding: 20px;
+  top: -10px;
+  display: inline-block;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 920px;
+  color: black; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 20px; 
+  font-weight: bold; 
+}
+
+.add_event {
+  margin: 20px;
+  padding: 20px;
+  top: -40px;
+  display: inline-block;
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 920px;
+  color: black; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 15px; 
+  font-weight: bold; 
+}
+
+.show_details {
+    margin: 20px;
+    padding: 20px;
+    top: 800px;
+    display: inline-block;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 920px;
+    color: black; 
+    font-weight: normal;
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 15px; 
+}
+
+
+.checklist {
+  font-size: 12px;
 }
 
 a {
@@ -116,7 +181,26 @@ a:hover {
   width: 400px;
   color: blue; 
   font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 20px; 
+  font-size: 15px; 
   font-weight: bold; 
   z-index:200;
+}
+
+.add_nation2 {
+  display: block;
+  position: relative;
+  background-color: white;
+  width: 400px;
+  color: blue; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 15px; 
+  font-weight: bold; 
+  z-index:200;
+}
+
+.participant {
+  color: black; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 15px; 
+  font-weight: bold; 
 }

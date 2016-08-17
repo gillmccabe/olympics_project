@@ -1,40 +1,37 @@
 <br></br>
-<h3>Event Details</h3>
+<h3 class="h3_fixed">Event Details</h3>
 <br>
 
-<b>Name of Event: </b>
-<p><%= @event.name %></p>
+<section class="show_details">
+<p><b>Name of Event:  </b><%= @event.name %></p>
 <br>
 
 <b>Participants in Event: </b><br>
 <% @participation.each do |athlete| %>
-  <%= Athlete.find_name(athlete.athlete_id) %><br>
+  <%= Athlete.find_name(athlete.athlete_id) %>  <br>
 <% end %>
 <br>
+
+<p><b>Gold Medal Winner:  </b>
+<%= Athlete.find_medal(@event.gold_id) %>
 <br>
 
-<b>Gold Medal Winner</b>
-<p><%= Athlete.find_medal(@event.gold_id) %></p>
-<br>
-<br>
-
-<b>Silver Medal Winner</b>
-<p><%= Athlete.find_medal(@event.silver_id) %></p>
-<br>
+<b>Silver Medal Winner:  </b>
+<%= Athlete.find_medal(@event.silver_id) %>
 <br>
 
-<b>Bronze Medal Winner</b>
-<p><%= Athlete.find_medal(@event.bronze_id) %></p>
-<br>
+<b>Bronze Medal Winner:  </b>
+<%= Athlete.find_medal(@event.bronze_id) %></p>
 <br>
 
 
-<a href="/events/<%= @event.id %>/edit">Edit</a>
+<a href="/events/<%= @event.id %>/edit"><b>Edit</b></a>
 <br>
 <br>
 <form action="/events/<%= @event.id %>/delete" method="post">
   <input type="submit" value="Delete">
 </form>
+</section>
 
 
 

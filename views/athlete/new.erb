@@ -1,9 +1,10 @@
 <h3>Add Athlete</h3>
-
+<section class="add_athlete">
 <form action="/athletes" method="post">
 
   <label for="name">Name:</label>
   <input type="text" name="name"><br>
+  <br>
 
   <label for="nation_id">Nation:</label>
       <select name="nation_id">
@@ -11,6 +12,9 @@
             <option value="<%= nation.id %>"><%= nation.name %></option>   
           <%  end %>
       </select>
+      
+
+
 
 <!--   <label for="event_id">Event:</label>
       <select name="event_id">
@@ -19,10 +23,14 @@
           <%  end %>
       </select> -->
 
-
-  <input type='submit' value="Add Athlete!">
+<br>
+<br>
+  <input type='submit' value="Add Athlete">
 </form>
 
 <br>
 <br>
+<div class="add_nation">
 <a href="/">Back</a>
+</div>
+</section>
