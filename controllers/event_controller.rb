@@ -9,7 +9,6 @@ get '/events' do
 end
 
 get '/events/new' do
-  @participation = Participation.all
   @athletes = Athlete.all
   erb(:'event/new')
 end
@@ -30,12 +29,6 @@ get '/events/:id/edit' do
 @athletes = Athlete.all
 erb(:'event/edit' )
 end
-
-post '/events/:id' do
-  Event.update( params )
-  redirect to( "/events/#{params[:id]}" )
-end
-
 
 post '/events/:id/delete' do
   Event.destroy( params[:id] )

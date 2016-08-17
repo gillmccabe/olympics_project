@@ -11,17 +11,21 @@
   <p><%=athlete.name %></p>   
 <%  end %>
 <br>
+<br>
 
 <b>Gold Medal Winner</b>
-<%= Athlete.find_medal(@event.gold_id) %>
+<p><%= Athlete.find_medal(@event.gold_id) %></p>
+<br>
 <br>
 
 <b>Silver Medal Winner</b>
-<%= Athlete.find_medal(@event.silver_id) %>
+<p><%= Athlete.find_medal(@event.silver_id) %></p>
+<br>
 <br>
 
 <b>Bronze Medal Winner</b>
-<%= Athlete.find_medal(@event.bronze_id) %>
+<p><%= Athlete.find_medal(@event.bronze_id) %></p>
+<br>
 <br>
 
 

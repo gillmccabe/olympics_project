@@ -6,6 +6,25 @@
   <input type="text" name="name"><br>
   <br>
 
+<!--   <label for="athlete_id">Participants:</label><br>
+  <% @athletes.each do |athlete| %>
+  <input type="checkbox" value="<%= athlete.id %>"><%= athlete.name %><br>
+  <% end %>
+  </select>
+  <br>
+  <br> -->
+
+  <% @athletes.each do |athlete| %>
+    <label for="<%= athlete.name %>"><%= athlete.name %></label>
+    <input name="<%= athlete.name %>" type="checkbox" value="<%= athlete.id %>">
+    <% end %>
+    </select>
+    <br>
+    <br>
+
+
+
+
   <label for="gold_id">Gold Medal Winner:</label>
   <select name="gold_id">
   <% @athletes.each do |athlete| %>

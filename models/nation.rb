@@ -22,30 +22,6 @@ class Nation
     return Athlete.map_items(sql)
   end
 
-  def gold_medals()
-    athletes.map do |athlete|
-      return athlete.gold_medals
-    end
-  end
-
-  def silver_medals()
-    athletes.map do |athlete|
-      return athlete.silver_medals
-    end
-  end
-
-  def bronze_medals()
-    athletes.map do |athlete|
-      return athlete.bronze_medals
-    end
-  end
-
-  def total_points()
-    athletes.map do |athlete|
-      return athlete.total_points
-    end
-  end
-
   def self.all()
     sql = "SELECT * FROM nations"
     return Nation.map_items(sql)
