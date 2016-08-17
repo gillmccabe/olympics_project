@@ -222,17 +222,18 @@ a:hover {
   border-radius:3px;
   border-collapse: collapse;
   height: 90px;
-  position: relative;
+  position: absolute;
   max-width: 700px;
   padding-top:5px;
   width: 30%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
+
 }
  
 th {
   color:#D5DDE5;;
-  background:#1b1e24;
+  background:#4682B4;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
   font-size:23px;
@@ -329,4 +330,8 @@ td.text-center {
 
 td.text-right {
   text-align: right;
+}
+
+.one {
+  margin-left: 30px;
 }
