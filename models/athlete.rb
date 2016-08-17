@@ -65,7 +65,13 @@ class Athlete
 
   def self.find(id)
     sql = "SELECT * FROM athletes WHERE id = #{id}"
-    return Athlete.map_item(sql)
+    Athlete.map_item(sql)
+  end
+
+  def self.find_medal(id)
+    sql = "SELECT * FROM athletes WHERE id = #{id}"
+    result = Athlete.map_item(sql)
+    return result.name
   end
 
   def self.update( options )

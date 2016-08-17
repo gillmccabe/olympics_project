@@ -1,5 +1,7 @@
 require_relative('../models/nation.rb')
 require_relative('../models/athlete.rb')
+require_relative('../models/league.rb')
+require_relative('../models/event.rb')
 require("pry-byebug")
 
 get '/nations' do
@@ -13,6 +15,7 @@ end
 
 get '/nations/:id' do
   @nation = Nation.find(params[:id])
+  @league = League.new( Nation.all, Athlete.all, Event.all )
   erb(:'nation/show')
 end
 

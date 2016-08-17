@@ -49,7 +49,6 @@ class Event
   end
 
 
-
   def self.map_items(sql)
     events = SqlRunner.run(sql)
     result = events.map { |event| Event.new( event ) }

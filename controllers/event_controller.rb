@@ -1,6 +1,5 @@
 require_relative('../models/nation.rb')
 require_relative('../models/event.rb')
-require_relative('../models/participation.rb')
 require_relative('../models/athlete.rb')
 require("pry-byebug")
 
