@@ -24,7 +24,6 @@ post '/events' do
   @event = Event.new(params)
   @athletes = Athlete.all
   @event.save()
-  @participation = Participation.update(params)
   redirect to( '/events' )
 end
 
