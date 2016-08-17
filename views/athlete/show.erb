@@ -8,7 +8,7 @@
 <p><b>Nation: </b><%= @athlete.nation.name %></p>
 <br>
 
-<p><b>Participating in: </b>
+<p><b>Participating in: </b><br></br>
 <% @athlete.events.each do |event| %><%=event.name %></p> 
 <%  end %>
 <br>

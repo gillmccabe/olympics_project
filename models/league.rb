@@ -1,6 +1,10 @@
+require_relative('athlete')
+require_relative('nation')
+require_relative('event')
 require 'pry-byebug'
 
 class League
+
 
   attr_accessor :nations, :athletes, :events
 

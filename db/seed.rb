@@ -62,6 +62,8 @@ participation11 = Participation.new({'athlete_id' => athlete3.id, 'event_id' => 
 participation12 = Participation.new({'athlete_id' => athlete7.id, 'event_id' => event3.id})
 participation13 = Participation.new({'athlete_id' => athlete1.id, 'event_id' => event3.id})
 participation14 = Participation.new({'athlete_id' => athlete5.id, 'event_id' => event3.id})
+participation15 = Participation.new({'athlete_id' => athlete2.id, 'event_id' => event2.id})
+participation1 = Participation.new({'athlete_id' => athlete1.id, 'event_id' => event3.id})
 
 participation1.save
 participation2.save
