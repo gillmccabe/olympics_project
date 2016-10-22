@@ -16,10 +16,14 @@ Create a web app which allows the results for the Rio Olympics to be searched an
 
 Planning
 
+
 Main Page
+
 <img width="700" alt="screen shot 2016-08-19 at 12 07 34" src="https://cloud.githubusercontent.com/assets/17990363/19620152/65a3d9d8-986e-11e6-8918-b8e7cea28c47.png">
 
 Update Entries
+
+<img width="700" alt="screen shot 2016-08-19 at 12 07 21" src="https://cloud.githubusercontent.com/assets/17990363/19620148/4a829874-986e-11e6-9588-1aed8e3cb8d5.png">
 
 
 # To run app >>
